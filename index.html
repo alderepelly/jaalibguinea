@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jaaliba Consulting – Ingénierie & Conseil en Guinée</title>
+  <meta name="description" content="Jaaliba Consulting est un cabinet de conseil basé en Guinée, spécialisé en ingénierie électronique, informatique, génie civil, environnement et finance.">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+</head>
+<body>
+  <!-- Barre de navigation -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <div class="logo">
+        <span class="logo-mark">J</span>
+        <span class="logo-text">Jaaliba<span>Consulting</span></span>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#hero">Accueil</a></li>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#sectors">Secteurs</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <!-- Section Hero -->
+  <section id="hero" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>Ingénierie & Conseil pour une Guinée durable et innovante</h1>
+        <p>
+          Jaaliba Consulting accompagne les entreprises, institutions et projets
+          en <strong>électronique</strong>, <strong>informatique</strong>, 
+          <strong>génie civil</strong>, <strong>environnement</strong> et 
+          <strong>finance</strong> pour transformer les idées en résultats concrets.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Parler à un consultant</a>
+          <a href="#services" class="btn btn-outline">Voir nos services</a>
+        </div>
+        <div class="hero-badges">
+          <span>Basé en Guinée</span>
+          <span>Approche 360°</span>
+          <span>Partenariats durables</span>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-inner">
+          <h2>Pourquoi Jaaliba&nbsp;?</h2>
+          <ul>
+            <li>Équipe pluridisciplinaire (technique & finance)</li>
+            <li>Solutions adaptées au contexte local</li>
+            <li>Accompagnement de la conception à l’exploitation</li>
+          </ul>
+          <div class="hero-stat-grid">
+            <div class="hero-stat">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Domaines d’expertise</span>
+            </div>
+            <div class="hero-stat">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Orienté résultats</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- À propos -->
+  <section id="about" class="section">
+    <div class="container about-grid">
+      <div>
+        <h2>À propos de Jaaliba Consulting</h2>
+        <p>
+          Jaaliba Consulting est un cabinet de conseil en ingénierie basé en Guinée,
+          créé pour répondre aux défis techniques, environnementaux et financiers des
+          organisations publiques et privées.
+        </p>
+        <p>
+          Notre mission est de fournir des solutions fiables, pragmatiques et durables,
+          en combinant expertise locale et bonnes pratiques internationales.
+        </p>
+      </div>
+      <div class="about-highlights">
+        <div class="highlight">
+          <h3>Vision</h3>
+          <p>
+            Contribuer à une Guinée résiliente, connectée et compétitive grâce à l’ingénierie
+            et à l’innovation.
+          </p>
+        </div>
+        <div class="highlight">
+          <h3>Valeurs</h3>
+          <p>
+            Intégrité, excellence, responsabilité environnementale, transfert de compétences
+            et impact durable.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Nos domaines d’ingénierie & de conseil</h2>
+      <p class="section-subtitle">
+        Une équipe multidisciplinaire pour couvrir l’ensemble du cycle de vie de vos projets.
+      </p>
+
+      <div class="service-filters">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="electronique">Électronique</button>
+        <button class="filter-btn" data-filter="informatique">Informatique</button>
+        <button class="filter-btn" data-filter="civil">Génie civil</button>
+        <button class="filter-btn" data-filter="environnement">Environnement</button>
+        <button class="filter-btn" data-filter="finance">Finance</button>
+      </div>
+
+      <div class="cards-grid" id="servicesGrid">
+        <article class="card service-card" data-category="electronique">
+          <h3>Ingénierie électronique</h3>
+          <p>
+            Conception de systèmes électroniques, automatisation, instrumentation,
+            maintenance d’équipements industriels et optimisation énergétique.
+          </p>
+          <ul>
+            <li>Études et dimensionnement</li>
+            <li>Automatisation de procédés</li>
+            <li>Maintenance et diagnostic</li>
+          </ul>
+        </article>
+
+        <article class="card service-card" data-category="informatique">
+          <h3>Ingénierie informatique & numérique</h3>
+          <p>
+            Développement de solutions logicielles, systèmes d’information,
+            cybersécurité, réseaux et transformation digitale.
+          </p>
+          <ul>
+            <li>Applications web & mobiles</li>
+            <li>Architecture systèmes & réseaux</li>
+            <li>Audit & sécurité informatique</li>
+          </ul>
+        </article>
+
+        <article class="card service-card" data-category="civil">
+          <h3>Génie civil & infrastructures</h3>
+          <p>
+            Études, conception et suivi de projets de construction, infrastructures
+            routières et ouvrages publics.
+          </p>
+          <ul>
+            <li>Études techniques & faisabilité</li>
+            <li>Plans d’exécution & dimensionnement</li>
+            <li>Supervision de chantiers</li>
+          </ul>
+        </article>
+
+        <article class="card service-card" data-category="environnement">
+          <h3>Environnement & développement durable</h3>
+          <p>
+            Accompagnement pour réduire l’impact environnemental des projets et
+            se conformer aux réglementations.
+          </p>
+          <ul>
+            <li>Études d’impact environnemental</li>
+            <li>Plans de gestion environnementale et sociale</li>
+            <li>Sensibilisation & formation</li>
+          </ul>
+        </article>
+
+        <article class="card service-card" data-category="finance">
+          <h3>Finance & structuration de projets</h3>
+          <p>
+            Conseil financier pour la structuration, l’analyse de rentabilité
+            et la recherche de financement.
+          </p>
+          <ul>
+            <li>Modélisation financière</li>
+            <li>Business plans & études économiques</li>
+            <li>Appui à la levée de fonds</li>
+          </ul>
+        </article>
+
+        <article class="card service-card" data-category="finance environnement">
+          <h3>Projets intégrés Tech & Finance</h3>
+          <p>
+            Montages de projets combinant innovation technologique, impact environnemental
+            et performance financière.
+          </p>
+          <ul>
+            <li>Projets d’énergie renouvelable</li>
+            <li>Solutions smart city</li>
+            <li>Projets PPP & partenariats</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Secteurs d’intervention -->
+  <section id="sectors" class="section">
+    <div class="container">
+      <h2 class="section-title">Secteurs d’intervention</h2>
+      <p class="section-subtitle">
+        Nous intervenons sur des projets variés en Guinée et dans la sous-région.
+      </p>
+
+      <div class="chips-grid">
+        <span class="chip">Énergie & électricité</span>
+        <span class="chip">Télécoms & réseaux</span>
+        <span class="chip">BTP & infrastructures</span>
+        <span class="chip">Industries & mines</span>
+        <span class="chip">Banques & microfinance</span>
+        <span class="chip">Startups & PME</span>
+        <span class="chip">Collectivités & administrations</span>
+        <span class="chip">Projets de développement</span>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-step">
+          <span class="step-number">1</span>
+          <h3>Diagnostic & cadrage</h3>
+          <p>Analyse de votre contexte, de vos besoins et des contraintes du terrain.</p>
+        </div>
+        <div class="process-step">
+          <span class="step-number">2</span>
+          <h3>Conception & ingénierie</h3>
+          <p>Études techniques, plans, modèles financiers et scénarios de mise en œuvre.</p>
+        </div>
+        <div class="process-step">
+          <span class="step-number">3</span>
+          <h3>Déploiement & suivi</h3>
+          <p>Accompagnement opérationnel, supervision, transfert de compétences.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section section-alt">
+    <div class="container contact-grid">
+      <div>
+        <h2>Contact & demande de devis</h2>
+        <p>
+          Un projet en ingénierie ou en finance&nbsp;? Parlons-en.
+          Remplissez le formulaire ci-contre et notre équipe vous répondra rapidement.
+        </p>
+        <div class="contact-info">
+          <p><strong>Localisation :</strong> Guinée</p>
+          <p><strong>Email :</strong> <a href="mailto:contact@jaaliba-consulting.com">contact@jaaliba-consulting.com</a></p>
+          <p><strong>Téléphone :</strong> +224 XX XX XX XX</p>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Nom complet</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email professionnel</label>
+            <input type="email" id="email" name="email" placeholder="vous@entreprise.com" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="company">Organisation</label>
+            <input type="text" id="company" name="company" placeholder="Nom de l’entreprise ou institution" />
+          </div>
+          <div class="form-group">
+            <label for="service">Domaine principal</label>
+            <select id="service" name="service">
+              <option value="">Sélectionnez un domaine</option>
+              <option>Électronique</option>
+              <option>Informatique</option>
+              <option>Génie civil</option>
+              <option>Environnement</option>
+              <option>Finance</option>
+              <option>Projet multisectoriel</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Décrivez votre besoin</label>
+          <textarea id="message" name="message" rows="5" placeholder="Expliquez votre projet, votre contexte, vos objectifs..." required></textarea>
+        </div>
+
+        <p class="form-note">
+          Ce formulaire est une démo. Sur la version finale, il faudra le connecter à une adresse email ou un backend.
+        </p>
+
+        <button type="submit" class="btn btn-primary btn-block">Envoyer la demande</button>
+        <p id="formStatus" class="form-status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Pied de page -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="logo footer-logo">
+          <span class="logo-mark">J</span>
+          <span class="logo-text">Jaaliba<span>Consulting</span></span>
+        </div>
+        <p class="footer-text">
+          Cabinet de conseil en ingénierie électronique, informatique, génie civil,
+          environnement et finance basé en Guinée.
+        </p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="#hero">Accueil</a></li>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Suivez-nous</h4>
+        <ul class="footer-links">
+          <li><a href="#">LinkedIn (à venir)</a></li>
+          <li><a href="#">Facebook (à venir)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-content">
+        <span>© <span id="year"></span> Jaaliba Consulting. Tous droits réservés.</span>
+        <span>Site vitrine GitHub Pages.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
