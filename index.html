@@ -1,155 +1,515 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JAALIBA CONSULTING - Corporate</title>
-<meta name="description" content="Cabinet de conseil en transformation digitale, stratégie et excellence opérationnelle.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jaaliba Consulting – Conseil clair pour vos projets en Guinée</title>
+  <meta name="description" content="Jaaliba Consulting accompagne vos projets en Guinée avec des conseils simples et professionnels en construction, informatique, énergie, environnement, finance, éducation et formation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles-nvidia.css" />
+  <link rel="icon" href="logo-blackgreen.png" />
 
-<style>
-:root{
-    --blue-dark:#0a1a3c;
-    --blue:#123b8d;
-    --accent:#6a4ff7;
-    --green:#1dbf73;
-    --gray:#f4f4f7;
-    --text:#2a2a2a;
-    --white:#ffffff;
-    --radius:16px;
-    --shadow:0 8px 24px rgba(0,0,0,0.12);
-    font-family:"Inter", system-ui, sans-serif;
-}
-
-*{box-sizing:border-box;}
-
-body{
-    margin:0;
-    background:var(--white);
-    color:var(--text);
-    line-height:1.6;
-}
-
-section{padding:110px 8%;}
-
-h1,h2,h3{font-weight:600;color:var(--blue-dark);}
-
-/* NAV */
-.navbar{
-    position:fixed;top:0;width:100%;z-index:50;
-    padding:14px 8%;
-    background:rgba(10,26,60,.95);
-    display:flex;justify-content:space-between;align-items:center;
-}
-.navbar img{height:50px;}
-.navbar ul{list-style:none;display:flex;gap:22px;margin:0;padding:0;}
-.navbar a{color:#fff;font-weight:500;}
-.navbar a.active,.navbar a:hover{color:var(--green);}    
-
-/* HERO */
-.hero{
-    min-height:100vh;
-    display:flex;align-items:center;justify-content:center;
-    text-align:center;color:white;
-    background:linear-gradient(135deg,var(--blue-dark),var(--blue));
-}
-.hero h1{font-size:3.2rem;margin-bottom:20px;color:white;}
-.hero p{font-size:1.25rem;opacity:.95;}
-.hero-buttons{margin-top:35px;display:flex;flex-wrap:wrap;gap:18px;justify-content:center;}
-
-/* BUTTONS */
-.btn-primary,.btn-secondary,.btn-tertiary{
-    padding:14px 28px;border-radius:var(--radius);
-    font-weight:600;transition:.3s;border:none;cursor:pointer;
-}
-.btn-primary{background:var(--green);color:white;}
-.btn-primary:hover{transform:translateY(-2px);}
-.btn-secondary{background:var(--accent);color:white;}
-.btn-tertiary{background:white;color:var(--blue-dark);}
-
-/* GRID */
-.service-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;}
-.card{
-    background:white;padding:30px;border-radius:var(--radius);
-    box-shadow:var(--shadow);transition:.3s;
-}
-.card:hover{transform:translateY(-8px);}    
-
-/* CASES */
-.case{background:var(--gray);padding:28px;border-radius:var(--radius);margin-bottom:25px;}
-
-/* CONTACT */
-.contact-form{max-width:600px;margin:auto;display:flex;flex-direction:column;gap:15px;}
-input,textarea{padding:14px;border-radius:var(--radius);border:1px solid #ccc;}
-
-/* FOOTER */
-.footer{background:var(--blue-dark);color:white;text-align:center;padding:25px;}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-    .navbar ul{display:none;}
-    .hero h1{font-size:2.4rem;}
-    section{padding:90px 6%;}
-}
-</style>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("Em8aOVPGkO6bnjdoC"); 
+        })();
+    </script>
 </head>
 <body>
-
-<header class="navbar">
-    <img src="assets/logo.svg" alt="JAALIBA Consulting">
-    <nav>
-        <ul>
-            <li><a href="#home" class="active">Accueil</a></li>
-            <li><a href="#about">À propos</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#cases">Études de cas</a></li>
-            <li><a href="#contact">Contact</a></li>
+  <!-- Barre de navigation -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <div class="logo">
+        <img src="logo-blackgreen.png" alt="Jaaliba Consulting" class="logo-image" />
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#hero">Accueil</a></li>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#sectors">Secteurs</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-    </nav>
-</header>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        ☰
+      </button>
+    </div>
+  </header>
 
-<section id="home" class="hero">
-    <div>
-        <h1>Accélérez la performance de votre organisation</h1>
-        <p>Stratégie • Transformation digitale • Excellence opérationnelle</p>
-        <div class="hero-buttons">
-            <a class="btn-primary" href="#contact">Contactez-nous</a>
-            <a class="btn-secondary" href="#contact">Obtenir un devis</a>
-            <a class="btn-tertiary" href="https://calendly.com" target="_blank">Rendez‑vous</a>
+  <!-- Section Hero -->
+  <section id="hero" class="hero hero-nvidia">
+    <div class="container hero-slider" id="heroSlider">
+      <div class="hero-slides">
+        <article class="hero-slide hero-slide-strategie is-active">
+          <div class="hero-grid">
+            <div class="hero-text">
+              <span class="hero-eyebrow">Conseil clair &amp; pratique</span>
+              <h1>Nous aidons vos projets &agrave; avancer avec clart&eacute;</h1>
+              <p>
+                Vous avez une id&eacute;e, un chantier, un dossier ou un besoin technique ?
+                Jaaliba Consulting vous accompagne en <strong>construction</strong>,
+                <strong>informatique</strong>, <strong>&eacute;nergie</strong>,
+                <strong>environnement</strong>, <strong>finance</strong> et <strong>formation</strong>.
+              </p>
+              <div class="hero-actions">
+                <a href="#contact" class="btn btn-primary">Parler avec nous</a>
+                <a href="#services" class="btn btn-outline">Voir nos services</a>
+              </div>
+              <div class="hero-badges">
+                <span>Mots simples</span>
+                <span>Aide pratique</span>
+                <span>Bas&eacute; en Guin&eacute;e</span>
+              </div>
+            </div>
+            <div class="hero-card">
+              <div class="hero-card-inner">
+                <div class="hero-card-media">
+                  <img src="assets/hero/plans-ingenierie.jpg" alt="Plans d'ingénierie avec ordinateur, compas et lunettes" class="hero-card-image" />
+                </div>
+                <h2>Pourquoi nous choisir&nbsp;?</h2>
+                <ul>
+                  <li>Nous &eacute;coutons d'abord votre besoin</li>
+                  <li>Nous proposons une solution utile et r&eacute;aliste</li>
+                  <li>Nous restons avec vous jusqu'&agrave; la mise en place</li>
+                </ul>
+                <div class="hero-stat-grid">
+                  <div class="hero-stat">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label">Domaines</span>
+                  </div>
+                  <div class="hero-stat">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Engagement</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="hero-slide hero-slide-digital">
+          <div class="hero-grid">
+            <div class="hero-text">
+              <span class="hero-eyebrow">Digital, syst&egrave;mes &amp; r&eacute;seaux</span>
+              <h1>Des solutions num&eacute;riques utiles au quotidien</h1>
+              <p>
+                Site web, application, r&eacute;seau informatique, cybers&eacute;curit&eacute; ou
+                digitalisation : nous vous aidons &agrave; choisir la bonne solution et &agrave;
+                la mettre en place progressivement.
+              </p>
+              <div class="hero-actions">
+                <a href="#services" class="btn btn-primary">Explorer les services</a>
+                <a href="#contact" class="btn btn-outline">Nous contacter</a>
+              </div>
+              <div class="hero-badges">
+                <span>Solutions sur mesure</span>
+                <span>S&eacute;curit&eacute;</span>
+                <span>Mise en place guid&eacute;e</span>
+              </div>
+            </div>
+            <div class="hero-card">
+              <div class="hero-card-inner">
+                <div class="hero-card-media">
+                  <img src="assets/hero/energie-solaire-irrigation.png" alt="Installation solaire pour énergie et irrigation agricole" class="hero-card-image" />
+                </div>
+                <h2>Une aide concr&egrave;te</h2>
+                <ul>
+                  <li>Comprendre le besoin r&eacute;el</li>
+                  <li>Choisir les outils adapt&eacute;s</li>
+                  <li>Accompagner l'usage apr&egrave;s le lancement</li>
+                </ul>
+                <div class="hero-stat-grid">
+                  <div class="hero-stat">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Vision orient&eacute;e continuit&eacute;</span>
+                  </div>
+                  <div class="hero-stat">
+                    <span class="stat-number">360&deg;</span>
+                    <span class="stat-label">Diagnostic des besoins num&eacute;riques</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="hero-slide hero-slide-infrastructure">
+          <div class="hero-grid">
+            <div class="hero-text">
+              <span class="hero-eyebrow">Construction, &eacute;nergie &amp; finance</span>
+              <h1>Construire, organiser et financer avec plus de clart&eacute;</h1>
+              <p>
+                Nous vous aidons &agrave; faire les <strong>plans</strong>, pr&eacute;parer les
+                <strong>&eacute;tudes</strong>, organiser le budget, suivre le chantier et
+                structurer les dossiers financiers.
+              </p>
+              <div class="hero-actions">
+                <a href="#sectors" class="btn btn-primary">Voir nos secteurs</a>
+                <a href="#about" class="btn btn-outline">D&eacute;couvrir notre approche</a>
+              </div>
+              <div class="hero-badges">
+                <span>Plans</span>
+                <span>Budget</span>
+                <span>Suivi projet</span>
+              </div>
+            </div>
+            <div class="hero-card">
+              <div class="hero-card-inner">
+                <div class="hero-card-media">
+                  <img src="assets/civil/genie-civil-rendu-maison.png" alt="Rendu 3D d'un projet de maison et d'infrastructure" class="hero-card-image" />
+                </div>
+                <h2>Pour vos travaux</h2>
+                <ul>
+                  <li>Conseil avant de commencer</li>
+                  <li>Etudes et plans d'ex&eacute;cution</li>
+                  <li>Contr&ocirc;le de l'avancement</li>
+                </ul>
+                <div class="hero-stat-grid">
+                  <div class="hero-stat">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">&Eacute;tapes de pilotage projet</span>
+                  </div>
+                  <div class="hero-stat">
+                    <span class="stat-number">1</span>
+                    <span class="stat-label">Partenaire de confiance du cadrage au suivi</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="hero-slider-controls" aria-label="Contr&ocirc;les du carousel de banni&egrave;re">
+        <button type="button" class="hero-slider-arrow" data-direction="prev" aria-label="Slide pr&eacute;c&eacute;dent">
+          &#8249;
+        </button>
+        <div class="hero-slider-dots" role="tablist" aria-label="Navigation du hero slider">
+          <button type="button" class="hero-slider-dot is-active" data-slide="0" role="tab" aria-selected="true" aria-label="Aller au slide 1"></button>
+          <button type="button" class="hero-slider-dot" data-slide="1" role="tab" aria-selected="false" aria-label="Aller au slide 2"></button>
+          <button type="button" class="hero-slider-dot" data-slide="2" role="tab" aria-selected="false" aria-label="Aller au slide 3"></button>
         </div>
+        <button type="button" class="hero-slider-arrow" data-direction="next" aria-label="Slide suivant">
+          &#8250;
+        </button>
+      </div>
     </div>
-</section>
+  </section>
 
-<section id="about">
-    <h2>Qui sommes‑nous ?</h2>
-    <p>JAALIBA CONSULTING accompagne les organisations dans leur croissance durable et leur modernisation.</p>
-</section>
-
-<section id="services">
-    <h2>Nos services</h2>
-    <div class="service-grid">
-        <div class="card"><h3>Conseil stratégique</h3><p>Vision, structuration et gouvernance.</p></div>
-        <div class="card"><h3>Transformation digitale</h3><p>Outils modernes et automatisation.</p></div>
-        <div class="card"><h3>Performance opérationnelle</h3><p>Optimisation et pilotage.</p></div>
+  <!-- À propos -->
+  <section id="about" class="section">
+    <div class="container about-grid">
+      <div>
+        <h2>Qui sommes-nous ?</h2>
+        <p>
+          Jaaliba Consulting est une structure basée en Guinée.
+          Nous aidons les personnes, les entreprises et les institutions à mieux préparer
+          et réaliser leurs projets.
+        </p>
+        <p>
+          Notre rôle est simple : écouter, comprendre le besoin, expliquer les options
+          avec des mots clairs et proposer une solution réaliste.
+        </p>
+      </div>
+      <div class="about-highlights">
+        <div class="highlight">
+          <h3>Vision</h3>
+          <p>
+            Aider les projets utiles pour les familles, les activités, les entreprises
+            et les communautés.
+          </p>
+        </div>
+        <div class="highlight">
+          <h3>Valeurs</h3>
+          <p>
+            Écoute, respect, clarté, rigueur technique et travail bien fait.
+          </p>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<section id="cases">
-    <h2>Études de cas</h2>
-    <div class="case"><strong>PME industrielle</strong> - +32% de productivité</div>
-    <div class="case"><strong>Organisation publique</strong> - -40% de délais</div>
-</section>
+  <!-- Services -->
+  <section id="services" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Nos domaines d'expertise</h2>
+      <p class="section-subtitle">
+        Des services professionnels, expliqués simplement, pour accompagner vos projets
+        de l'idée à la réalisation.
+      </p>
 
-<section id="contact">
-    <h2>Contact</h2>
-    <form class="contact-form">
-        <input type="text" placeholder="Nom complet" required>
-        <input type="email" placeholder="Email" required>
-        <textarea placeholder="Votre message" required></textarea>
-        <button class="btn-primary">Envoyer</button>
-    </form>
-</section>
+      <div class="service-filters">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="electronique">Électronique</button>
+        <button class="filter-btn" data-filter="informatique">Informatique</button>
+        <button class="filter-btn" data-filter="civil">Génie civil</button>
+        <button class="filter-btn" data-filter="environnement">Environnement</button>
+        <button class="filter-btn" data-filter="finance">Finance</button>
+        <button class="filter-btn" data-filter="education">Education</button>
+        <button class="filter-btn" data-filter="formation">Formation</button>
+      </div>
 
-<footer class="footer">© 2025 JAALIBA CONSULTING</footer>
+      <div class="cards-grid" id="servicesGrid">
+        <article class="card service-card" data-category="electronique">
+          <div class="service-card-media electronique-card-media">
+            <img src="assets/electronique/circuit-jaaliba.png" alt="Carte électronique conçue pour Jaaliba Consulting" class="service-card-image" />
+          </div>
+          <h3>Électronique &amp; énergie</h3>
+          <p>
+            Conception, installation et diagnostic de solutions électroniques,
+            électriques et énergétiques adaptées au terrain.
+          </p>
+          <ul>
+            <li>Études et dimensionnement de systèmes</li>
+            <li>Automatisation et instrumentation</li>
+            <li>Maintenance et diagnostic</li>
+          </ul>
+        </article>
 
+        <article class="card service-card" data-category="informatique">
+          <div class="service-card-media">
+            <img src="assets/informatique/serveurs-reseaux.jpg" alt="Racks serveurs et infrastructure réseau" class="service-card-image" />
+          </div>
+          <h3>Informatique &amp; numérique</h3>
+          <p>
+            Sites web, applications, réseaux et outils numériques pour rendre les
+            activités plus organisées, rapides et fiables.
+          </p>
+          <ul>
+            <li>Applications web &amp; mobiles</li>
+            <li>Architecture systèmes &amp; réseaux</li>
+            <li>Audit &amp; sécurité informatique</li>
+          </ul>
+        </article>
+
+        <article class="card service-card" data-category="civil">
+          <div class="service-card-media">
+            <img src="assets/civil/genie-civil-rendu-principal.jpg" alt="Rendu 3D d'une maison avec terrasse, jardin et cl&ocirc;ture" class="service-card-image" />
+          </div>
+          <h3>Génie civil &amp; construction</h3>
+          <p>
+            Études, conception, plans et suivi de projets de construction, de bâtiments
+            et d'infrastructures.
+          </p>
+          <ul>
+            <li>Études techniques &amp; faisabilité</li>
+            <li>Plans d'exécution &amp; dimensionnement</li>
+            <li>Supervision de chantiers</li>
+          </ul>
+        </article>
+
+        <article class="card service-card" data-category="environnement">
+          <div class="service-card-media">
+            <img src="assets/environnement/controle-environnemental.png" alt="Contrôle environnemental avec équipement de mesure" class="service-card-image" />
+          </div>
+          <h3>Environnement &amp; durabilité</h3>
+          <p>
+            Accompagnement pour réduire l'impact environnemental des projets et mieux
+            gérer les risques liés à l'eau, l'air et les déchets.
+          </p>
+          <ul>
+            <li>Études d'impact environnemental</li>
+            <li>Plans de gestion environnementale et sociale</li>
+            <li>Sensibilisation &amp; formation</li>
+          </ul>
+        </article>
+
+        <article class="card service-card" data-category="finance">
+          <div class="service-card-media">
+            <img src="assets/finance/analyse-financiere.jpg" alt="Analyse financière avec graphiques, calculatrice et loupe" class="service-card-image" />
+          </div>
+          <h3>Finance &amp; structuration de projets</h3>
+          <p>
+            Appui pour préparer les budgets, analyser la rentabilité, monter les dossiers
+            et rechercher des financements.
+          </p>
+          <ul>
+            <li>Modélisation financière</li>
+            <li>Business plans &amp; études économiques</li>
+            <li>Appui à la levée de fonds</li>
+          </ul>
+        </article>
+
+        <article class="card service-card" data-category="education">
+          <div class="service-card-media education-card-media">
+            <img src="assets/formation/formation-academique.jpg" alt="Formation académique et accompagnement éducatif" class="service-card-image" />
+          </div>
+          <h3>Education &amp; orientation</h3>
+          <p>
+            Conseil pour les études, l'orientation académique et les démarches
+            administratives vers l'Europe, le Canada et les États-Unis.
+          </p>
+          <ul>
+            <li>Orientation et choix de formation</li>
+            <li>Mise en relation avec des universités partenaires</li>
+            <li>Assistance dossiers, visa et recherche de bourses</li>
+          </ul>
+        </article>
+
+        <article class="card service-card" data-category="formation">
+          <div class="service-card-media">
+            <img src="assets/formation/formation-robotique.png" alt="Formation pratique en robotique et outils numériques" class="service-card-image" />
+          </div>
+          <h3>Formation professionnelle</h3>
+          <p>
+            Formations pratiques pour renforcer les compétences techniques, numériques
+            et métiers des équipes.
+          </p>
+          <ul>
+            <li>Electronique analogique et numérique</li>
+            <li>Gestion et planning projets BTP</li>
+            <li>Excel, Power BI et outils métiers</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Secteurs d’intervention -->
+  <section id="sectors" class="section">
+    <div class="container">
+      <h2 class="section-title">Secteurs d’intervention</h2>
+      <p class="section-subtitle">
+        Nous intervenons sur des projets variés en Guinée et dans la sous-région.
+      </p>
+
+      <div class="chips-grid">
+        <span class="chip">Énergie &amp; électricité</span>
+        <span class="chip">Télécoms &amp; réseaux</span>
+        <span class="chip">BTP &amp; infrastructures</span>
+        <span class="chip">Industries &amp; mines</span>
+        <span class="chip">Banques &amp; microfinance</span>
+        <span class="chip">Startups &amp; PME</span>
+        <span class="chip">Collectivités &amp; administrations</span>
+        <span class="chip">Projets de développement</span>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-step">
+          <span class="step-number">1</span>
+          <h3>Diagnostic &amp; cadrage</h3>
+          <p>Analyse de votre contexte, de vos besoins et des contraintes du terrain.</p>
+        </div>
+        <div class="process-step">
+          <span class="step-number">2</span>
+          <h3>Conception &amp; ingénierie</h3>
+          <p>Études techniques, plans, modèles financiers et scénarios de mise en œuvre.</p>
+        </div>
+        <div class="process-step">
+          <span class="step-number">3</span>
+          <h3>Déploiement &amp; suivi</h3>
+          <p>Accompagnement opérationnel, supervision, transfert de compétences.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section section-alt">
+    <div class="container contact-grid">
+      <div>
+        <h2>Contact &amp; demande de devis</h2>
+        <p>
+          Vous avez un projet, une idée ou un problème à résoudre ?
+          Écrivez-nous simplement et notre équipe vous répondra rapidement.
+        </p>
+        <p class="contact-simple-note">
+          Vous pouvez expliquer votre besoin avec vos propres mots. Nous sommes là pour écouter,
+          clarifier et vous guider.
+        </p>
+        <div class="contact-info">
+          <p><strong>Localisation :</strong> Guinée</p>
+          <p><strong>Email :</strong> <a href="mailto:contact@jaaliba-consulting.com">Jaaliba.contact@gmail.com </a></p>
+          <p><strong>Téléphone :</strong> +224 XX XX XX XX</p>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Nom complet</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="votre@email.com" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="company">Entreprise, activité ou structure</label>
+            <input type="text" id="company" name="company" placeholder="Nom de votre activité ou structure" />
+          </div>
+          <div class="form-group">
+            <label for="service">Ce dont vous avez besoin</label>
+            <select id="service" name="service">
+              <option value="">Sélectionnez un domaine</option>
+              <option>Électronique</option>
+              <option>Informatique</option>
+              <option>Génie civil</option>
+              <option>Environnement</option>
+              <option>Finance</option>
+              <option>Education</option>
+              <option>Formation</option>
+              <option>Projet multisectoriel</option>
+              <option>Autre besoin</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Expliquez votre besoin</label>
+          <textarea id="message" name="message" rows="5" placeholder="Exemple : je veux construire, installer, apprendre, réparer, digitaliser ou trouver un financement..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Envoyer la demande</button>
+        <p id="formStatus" class="form-status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Pied de page -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="logo footer-logo">
+          <img src="logo-blackgreen.png" alt="Jaaliba Consulting" class="logo-image footer-logo-image" />
+        </div>
+        <p class="footer-text">
+          Conseil clair et accompagnement pratique pour les projets utiles en Guinée :
+          construction, numérique, énergie, environnement, finance, éducation et formation.
+        </p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="#hero">Accueil</a></li>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Suivez-nous</h4>
+        <ul class="footer-links">
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61583084091327">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-content">
+        <span>© <span id="year"></span> Jaaliba Consulting. Tous droits réservés.</span>
+        <span>Site vitrine GitHub Pages.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
